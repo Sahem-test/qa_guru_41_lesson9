@@ -40,8 +40,10 @@ tasks.withType(JavaCompile){
     options.encoding = 'UTF-8'
 }
 
-test {
-    useJUnitPlatform {
+test
+
+
+        {
         systemProperties(System.getProperties())
     }
 
@@ -51,4 +53,4 @@ test {
     testLogging {
         events "passed", "skipped", "failed", "standard_out"
     }
-}
+
